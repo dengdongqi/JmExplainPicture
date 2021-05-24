@@ -10,14 +10,14 @@
 ![左屏图](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/2.png)  
 
 * 右屏
-功能: 健康系统、户型系统、格瑞系统、科技系统  
+功能: 健康系统、户式系统、格瑞系统、科技系统  
 ![右屏图](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/3.png)  
 
 ## 部分功能说明
 
 ### 设置
 * 配置工具
-![配置工具](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/4.png)
+![配置工具](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/4.png)  
 账号处输入特定密码触发影藏操作:  
 ①.0000000000 --> 返回系统桌面  
 ②.2222222222 --> 开启上传网址,可上传setting.txt[setting.txt模板](https://github.com/dengdongqi/JmExplainPicture/blob/main/setting.txt) 等配置文件  
@@ -29,11 +29,36 @@
 可配置项目启用指定功能:智能家居、可视对讲、园区监控、右屏展示、物业名称、园区监控摄像头、主页图、可视对讲轮播图. 选择完成后滑动至底部点击应用完成修改配置
 * 唤醒开关
 设置-唤醒开关  
-默认开启,AI语音使用的前提为<font color=red>魔镜可正常使用网络</font>,完成AI语音SDK验证才可使用  
-测试: 对魔镜说<font color=red>'小茂你好'</font>唤醒AI对讲 魔镜回答'您好，很高兴为您服务'为正常  
+默认开启,AI语音使用的前提为<font color=red>魔镜可正常使用网络</font>,完成AI语音SDK验证才可使用测试: 对魔镜说<font color=red>'小茂你好'</font>唤醒AI对讲 魔镜回答'您好，很高兴为您服务'为正常  
 提高识别率: 普通话发音标准,语速稍慢
 * 蓝牙
 <font color=red>健康系统</font>使用的前提必须打开蓝牙
+
+### 右屏展示
+
+#### 健康设备
+绑定设备,并使用,将记录使用数据  
+1. 设置 - 蓝牙 - 打开蓝牙
+2. 设置 - 健康设备 - 发现设备提醒 - 打开
+3. 激活设备 : 牙刷->按击开关键,等待魔镜弹窗提醒; 体脂称->踩上体脂称,等待魔镜弹窗提醒等等
+4. 绑定设备,会自动连接设备
+5. 开始使用设备
+
+#### 户式系统
+485串口通讯,接魔镜普通485口,已接入1.2协议版本和1.4协议版本
+
+#### 格瑞系统
+网络通讯,网络正常即可,已接入FBox 客户端账号"XXH-BOX"下4个盒子数据  
+西安展厅:300118050295 、深圳展厅:300020070182、未来家展厅:300020090047、武汉展厅:300020090074.如需增加需提交需求给工程师适配兼容
+
+#### 科技系统
+modbus tcp通讯,魔镜wifi和科技系统主板统一局域网  
+* 更换IP端口
+(1).魔镜端-设置-配置工具-账号处输入222222222222- 进入配置界面  
+(2).和魔镜同一局域网下, 用电脑访问魔镜端显示的魔镜访问地址  
+(3).修改setting.txt文件中keji标签下配置  
+(4).abb配置格式:#abb@IP端口 eg:#keji@192.168.0.95@502  
+(5).上传文件，自动提示重启后,完成配置
 
 ### 可视对讲
 
@@ -167,5 +192,16 @@ tfjmy
 (3).魔镜端-设置-配置工具-账号处输入222222222222- 进入配置界面  
 (4).和魔镜同一局域网下, 用电脑访问魔镜端显示的魔镜访问地址  
 (5).上传XLSX文件,手动重启APP,完成配置
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15` 
-#### 485直连BUSPRO
+#### 三合一界面智能家居 
+操作原型  
+[操作原型](https://github.com/dengdongqi/JmExplainPicture/blob/main/魔镜智能家居三合一原型.docx)
+##### 485直连BUSPRO 、485直连ZIGBEE、西门子
+MCU单片机口485直连通讯  
+* 机器MCU位置  
+[串口布局](https://github.com/dengdongqi/JmExplainPicture/blob/main/窗口布局.zip)  
+* 添加设备  
+除西门子外,其它均需要手动搜索设备,具体查看原型添加设备逻辑;西门子房间设备固定写死在app内,无法通过配置等方式修改,如需更换房间/设备需通知工程师更新程序
+##### 485转USB ZIGBEE
+需要485直连转USB工具线,接魔镜USB口
+##### IP BUSPRO
+WIFI通信,路由器需设置为XXX.XXX.10.1网段 
