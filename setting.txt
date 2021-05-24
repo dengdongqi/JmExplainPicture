@@ -1,0 +1,9 @@
+﻿#haikang@a19cef09fbd44642bb4f990faacbac9d@f905ef86efa096ba45664904721fac54
+#fenglin@AliasName@UnitNo@FloorNo@RoomNo@ServerIp@ServerPort
+#电梯口@192.168.1.108@37777@admin@admin
+#东门口@192.168.1.108@37777@admin@admin
+#西门口@192.168.1.108@37777@admin@admin
+#公园@192.168.1.108@37777@admin@admin
+#abb@192.168.1.232@8888
+#xixi@192.168.0.201@8080
+#keji@192.168.0.95@502

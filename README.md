@@ -2,14 +2,16 @@
 
 ## 功能介绍
 * 主页
-![首页图](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/1.png)
 功能: 时间、天气、新闻、社区公告、音乐、留言、健康评测、安心食材、智慧菜谱、可视对讲(丰林、西西、罗格朗)、园区监控(大华、海康)、语音显示、设置  
+![首页图](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/1.png)  
+
 * 左屏
-![左屏图](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/2.png)
 功能: 智能家居控制系统 (ABB、485直连BUSPRO、IP BUSPRO、485转USB ZIGBEE、485直连ZIGBEE、西门子)  
+![左屏图](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/2.png)  
+
 * 右屏
+功能: 健康系统、户型系统、格瑞系统、科技系统  
 ![右屏图](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/3.png)  
-功能: 健康系统、户型系统、格瑞系统、科技系统
 
 ## 部分功能说明
 
@@ -18,7 +20,7 @@
 ![配置工具](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/4.png)
 账号处输入特定密码触发影藏操作:  
 ①.0000000000 --> 返回系统桌面  
-②.2222222222 --> 开启上传网址,可上传setting.txt等配置文件  
+②.2222222222 --> 开启上传网址,可上传setting.txt[setting.txt模板](https://github.com/dengdongqi/JmExplainPicture/blob/main/setting.txt) 等配置文件  
 ③.ADBWIFI --> 开启ADB WIFI 用于开发人员远程调试  
 ④.升级失败 --> pad133内存不足时,会导致升级失败.通过输入'升级失败'处理此问题.(前提是点击升级提醒下载好APK并升级无效之后输入才有效)
 * 模块调试
@@ -70,12 +72,12 @@
 sdkNum超出/不足: 会导致初始化失败!!!!!!!!!!!! 解决办法:联系西西开发人员更新授权文件
 
 #### 丰林
-外网线上注册,注册之后可去除外网本地局域网LAN口通讯
+外网线上注册,注册之后可去除外网本地局域网LAN口通讯  
 ![丰林可视对讲](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/6.png)  
-* 一、门口机设置
+* 一、门口机设置  
 ![丰林机器设置网站](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/7.png)  
 1. 查看门口机ip，先按#号键，输入<font color=red>反向日期</font>，eg：当时日期是2019/12/16 则输入：16122019 密码后按#。则会弹出当时机器ip和服务器地址  
-2. 门口机工程配置页面 http://192.168.0.64(门口机IP):6060(门口机端口)/v1/intf/setting  (与室外机同一局域网内访问)
+2. 门口机工程配置页面 http://192.168.0.64(门口机IP):6060(门口机默认端口)/v1/intf/setting  (与室外机同一局域网内访问)
 (1).服务器设置:112.74.164.111 ----> 输入目前服务器IP  
 (2).服务器端口默认:180 ----> 目前服务器端口:180  
 (3).安装位置: 0905  ----> 9单元5栋  
@@ -93,7 +95,6 @@ sdkNum超出/不足: 会导致初始化失败!!!!!!!!!!!! 解决办法:联系西
 (15).------记录设备(门口机)ID号 下一步需要-------
 3. 输入工程密码: '88888888'点击 提交 完成修改
 * 二、 服务器管理平台 ( http://112.74.164.111:180/index.php/Home/index)
-![丰林服务器管理平台](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/8.png)
 账号密码: 登录所在大区的具体丰林服务器账号  
 abcdef
 123456  
@@ -104,14 +105,15 @@ tfjmy
 1. 选择 '设备上线' -- 添加 -- (序列号,机器码) 填一2(15)步记录的门口机id
 2. 重启门口机
 3. 选择 '设备上线' -- 添加 -- (序列号,机器码) 填魔镜序列号地址 -->可视对讲配置页面魔镜序列号eg:RC133N120030013
- 三、 魔镜端配置
- ![丰林魔镜端配置](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/9.png)
+![丰林服务器管理平台](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/8.png)  
+三、 魔镜端配置
 1. 方式一: 设置 - 可视对讲 - 输入工程密码 '8888'进行设置  
 (1).设备名称:室内机XXXX  
 (2).安装位置: 一2(3) 一致  eg:0905  
 (3).房号,楼号: int 两位数 eg:09,02 九楼二号房  
 (4).服务器IP: 一2(1) 一致  
-(5).服务器端口: 一2(2) 一致
+(5).服务器端口: 一2(2) 一致  
+![丰林魔镜端配置](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/9.png)  
 2. 方式二: 上传Setting_XXXXXX.txt 丰林配置  
 (1).丰林配置格式: #fenglin@AliasName@UnitNo@FloorNo@RoomNo@ServerIp@ServerPort,eg:#fenglin@室内机0907@0905@09@07@112.74.164.111@180  
 (2).上传并重启 应用/魔镜 完成配置
@@ -121,8 +123,8 @@ tfjmy
 ### 园区监控
 
 #### 大华
-本地局域网LAN口通讯
- ![大华界面](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/9.png)
+本地局域网LAN口通讯  
+![大华界面](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/9.png)
 * 查看设备属性
 登录路由器查看’终端设备’获取设备分配的IP 端口默认37777  
 同局域网下访问摄像头ip 可进入设备配置页, 账号密码默认 账号:admin  密码:admin / admin123 / admin000
@@ -150,7 +152,7 @@ tfjmy
 ### 智能家居
 
 #### ABB
-本地局域网WIFI通讯
+本地局域网WIFI通讯  
 ![ABB](https://raw.githubusercontent.com/dengdongqi/JmExplainPicture/main/2.png)
 * 更换ABB配置
 1. 更换IP/端口  
@@ -160,8 +162,10 @@ tfjmy
 (4).abb配置格式:#abb@IP端口 eg:#abb@192.168.1.232@8888  
 (5).上传文件，自动提示重启后,完成配置
 2. 更换设备配置  
-(1).默认模板xlsx设备配置文件:[模板](https://github.com/dengdongqi/JmExplainPicture/blob/main/jinmao_smart_home.xlsx)  
+(1).默认模板xlsx设备配置文件:[abb设备模板](https://github.com/dengdongqi/JmExplainPicture/blob/main/jinmao_smart_home.xlsx)  
 (2).按模板格式更新具体详情设备xlsx表格数据  
 (3).魔镜端-设置-配置工具-账号处输入222222222222- 进入配置界面  
 (4).和魔镜同一局域网下, 用电脑访问魔镜端显示的魔镜访问地址  
 (5).上传XLSX文件,手动重启APP,完成配置
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15` 
+#### 485直连BUSPRO
