@@ -194,11 +194,11 @@ tfjmy
 (5).上传XLSX文件,手动重启APP,完成配置
 #### 三合一界面智能家居 
 操作原型  
-[操作原型](https://github.com/dengdongqi/JmExplainPicture/blob/main/魔镜智能家居三合一原型.docx)
+[操作原型](https://github.com/dengdongqi/JmExplainPicture/blob/main/smart_home_prototype.docx)
 ##### 485直连BUSPRO 、485直连ZIGBEE、西门子
 MCU单片机口485直连通讯  
 * 机器MCU位置  
-[串口布局](https://github.com/dengdongqi/JmExplainPicture/blob/main/窗口布局.zip)  
+[串口布局](https://github.com/dengdongqi/JmExplainPicture/blob/main/series_circuits.zip)  
 * 添加设备  
 除西门子外,其它均需要手动搜索设备,具体查看原型添加设备逻辑;西门子房间设备固定写死在app内,无法通过配置等方式修改,如需更换房间/设备需通知工程师更新程序
 ##### 485转USB ZIGBEE
